@@ -1,0 +1,68 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #283a54;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.column-data {
+  font-size: 14px;
+}
+
+.price-column-data {
+  font-size: 22px;
+}
+
+.aggregate-volume-column-data {
+  font-size: 16px;
+}
+
+.volume-column-data {
+  font-size: 14px;
+}
+.sides-banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.sides {
+  color: #bdcbde;
+  font-size: 40px;
+  font-variant: all-petite-caps;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ReactTable .rt-thead .rt-resizable-header-content {
+  white-space: normal;
+}
