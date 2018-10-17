@@ -2,7 +2,7 @@
 
 displays combined orderbooks from popular cryptocurrency exchanges
 
-presents data streamed from [this aggregator](https://github.com/tuddman/oderbook-server)
+presents data streamed from [this aggregator](https://github.com/tuddman/orderbook-server)
 
 ### Usage
 
