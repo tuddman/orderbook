@@ -12,6 +12,25 @@ const orderbookServerUrl = 'ws://localhost:8000';
 
 const orderbook = makeOrderbookData();
 
+const aggregateVol = (vol1, vol2) => {
+  console.log('vol1 : ', vol1, 'vol2 : ', vol2);
+  console.log('vol1 t: ', typeof vol1, 'vol2 t : ', typeof vol2);
+  if (vol1 !== undefined && vol2 !== undefined) {
+    console.log('both have length');
+    return vol1 + vol2;
+  } else {
+    if (vol1 !== undefined) {
+      console.log('vol1 length');
+      return vol1;
+    } else if (vol2 !== undefined) {
+      console.log('vol2 length');
+      return vol2;
+    } else {
+      return '-';
+    }
+  }
+};
+
 const columns = [
   // header: Bid/Ask
   // headerClassname: 'my-header'
@@ -41,7 +60,9 @@ const columns = [
     className: 'column-data',
     Cell: props => (
       <span className="number">
-        {props.original.orderType === 'bid' ? props.value : '-'}
+        {props.original.orderType === 'bid'
+          ? aggregateVol(props.original.pVol, props.original.bVol)
+          : '-'}
       </span>
     ),
   },
@@ -59,7 +80,7 @@ const columns = [
         className={`number ${
           props.value < orderbook.highestBid ? 'number-crossed' : ''
         }`}>
-        {props.original.orderType === 'ask' ? props.value : '-'}
+        {props.original.orderType === 'ask' ? aggregateVol(props.original.pVol, props.original.bVol) : '-'}
       </span>
     ),
   },
