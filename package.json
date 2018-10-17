@@ -4,20 +4,15 @@
   "version": "0.1.0",
   "private": false,
   "dependencies": {
-    "crypto-socket": "^3.0.2",
     "faye-websocket": "^0.11.1",
     "global": "^4.3.2",
     "jsonic": "^0.3.1",
     "lodash": "^4.17.11",
-    "poloniex-api-node": "^1.9.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.4",
     "react-table": "^6.8.6",
-    "react-websocket": "^2.0.0",
-    "signalr-client": "^0.0.19",
-    "websocket": "^1.0.28",
-    "ws-cli": "^0.0.3"
+    "react-websocket": "^2.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
