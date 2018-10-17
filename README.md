@@ -4,6 +4,20 @@ displays combined orderbooks from popular cryptocurrency exchanges
 
 presents data streamed from [this aggregator](https://github.com/tuddman/oderbook-server)
 
+### Usage
+
+```bash
+## Do once, first:
+
+yarn install 
+
+## then,
+
+yarn start
+
+ ## a browser window should automatically open
+```
+
 ### Pushing updates
 
 ```bash
