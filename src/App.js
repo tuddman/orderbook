@@ -9,21 +9,17 @@ import './App.css';
 import {makeOrderbookData} from './exampleTable';
 
 const orderbookServerUrl = 'ws://localhost:8000';
+// const orderbookServerUrl = 'ws://104.248.182.97:8000';
 
 const orderbook = makeOrderbookData();
 
 const aggregateVol = (vol1, vol2) => {
-  console.log('vol1 : ', vol1, 'vol2 : ', vol2);
-  console.log('vol1 t: ', typeof vol1, 'vol2 t : ', typeof vol2);
   if (vol1 !== undefined && vol2 !== undefined) {
-    console.log('both have length');
     return vol1 + vol2;
   } else {
     if (vol1 !== undefined) {
-      console.log('vol1 length');
       return vol1;
     } else if (vol2 !== undefined) {
-      console.log('vol2 length');
       return vol2;
     } else {
       return '-';
